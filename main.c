@@ -4,7 +4,7 @@
 
 #include "a.out.h"
 
-#define OFFSET(a, b) (((char*)(&a->b)) - ((char *)a))
+#define OFFSET(a, b) (((char *)(&a->b)) - ((char *)a))
 #define INFO(a, b, c, d, e) printf("%08x: %-11s "c"%*.s%s\n", OFFSET(a, b), #b, a->b, 9 - d, "", e)
 
 struct gnu_nlist
