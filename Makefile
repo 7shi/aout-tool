@@ -9,5 +9,8 @@ test: $(TARGET) test.o
 test.o: test.c
 	i386-pc-minix-gcc -c test.c
 
+install: $(TARGET)
+	cp $(TARGET) /usr/local/bin
+
 clean:
 	rm -f $(TARGET) *.o *core
