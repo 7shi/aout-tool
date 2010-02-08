@@ -31,7 +31,7 @@ void print_symbols(const char *buf, int len)
 	int start = A_SYMPOS(*a), end = start + a->a_syms, addr = start;
 	if (len < end)
 	{
-		printf("FILE IS TOO SHORT: %08x < %08x", len, end);
+		printf("FILE IS TOO SHORT: %08x < %08x\n", len, end);
 		return;
 	}
 	while (addr < end)
@@ -56,7 +56,7 @@ void print_relocs(const char *buf, int len, int pos, int rlen)
 	int end = pos + rlen, addr = pos;
 	if (len < end)
 	{
-		printf("FILE IS TOO SHORT: %08x < %08x", len, end);
+		printf("FILE IS TOO SHORT: %08x < %08x\n", len, end);
 		return;
 	}
 	while (addr < end)
